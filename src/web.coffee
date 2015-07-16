@@ -50,6 +50,12 @@ app.get '/register.html', (req, res) ->
 app.get '/hidenseek.html', (req, res) ->
   res.render 'games/hidenseek'
   
+app.get '/market.html', (req, res) ->
+  res.render 'games/market'
+  
+app.get '/golf-cartte.html', (req, res) ->
+  res.render 'games/golf-cartte'
+      
 # Server
 http = app.listen app.PORT, '0.0.0.0', ->
   log 'Listening on '+ JSON.stringify http.address()
