@@ -41,13 +41,13 @@ app.use express.static app.PUBLIC # static file server
 app.get '/', (req, res) ->
   res.render 'home'
 
-app.get '/login', (req, res) ->
+app.get '/login.html', (req, res) ->
   res.render 'login'
   
-app.get '/register', (req, res) ->
+app.get '/register.html', (req, res) ->
   res.render 'register'
   
-app.get '/hidenseek', (req, res) ->
+app.get '/hidenseek.html', (req, res) ->
   res.render 'games/hidenseek'
   
 # Server
