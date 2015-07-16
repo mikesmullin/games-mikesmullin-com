@@ -1,0 +1,4 @@
+/db/data/*.json
+/src/public/behaviors/*.js
+/src/public/stylesheets/*.css
+/node_modules/
