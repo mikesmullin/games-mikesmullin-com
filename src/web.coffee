@@ -52,6 +52,9 @@ app.get '/hidenseek.html', (req, res) ->
   
 app.get '/market.html', (req, res) ->
   res.render 'games/market'
+
+app.get '/prophunt.html', (req, res) ->
+  res.render 'games/prophunt'
   
 app.get '/golf-cartte.html', (req, res) ->
   res.render 'games/golf-cartte'
