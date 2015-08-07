@@ -58,6 +58,12 @@ app.get '/prophunt.html', (req, res) ->
   
 app.get '/golf-cartte.html', (req, res) ->
   res.render 'games/golf-cartte'
+  
+app.get '/mazehunt.html', (req, res) ->
+  res.render 'games/mazehunt'
+  
+app.get '/pupu-panic.html', (req, res) ->
+  res.render 'games/pupu-panic'
       
 # Server
 http = app.listen app.PORT, '0.0.0.0', ->
