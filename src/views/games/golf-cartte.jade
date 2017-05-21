@@ -51,7 +51,7 @@ block head
           break;
         }
       });
-      u.initPlugin(jQuery("#unityPlayer")[0], "https://dl.dropboxusercontent.com/u/12710135/GolfCartte/GolfCartte.unity3d");
+      u.initPlugin(jQuery("#unityPlayer")[0], "http://cdn.smullindesign.com/GolfCartte/GolfCartte.unity3d");
     });
     -->
   style(type="text/css").
@@ -85,6 +85,12 @@ block head
 
 block content
   article.game
+    p
+      | This game uses Unity Web Player which was cool in 2015 but now days is blocked by every major browser.
+      br
+      | It will NOT work in Chrome, Firefox, or Opera. It only works in Internet Explorer.
+      br
+      | One day I'll rebuild for the HTML5 target, which is the current hotness.
     #unityPlayer
       .missing
         a(href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!")
