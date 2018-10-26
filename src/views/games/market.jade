@@ -2,13 +2,7 @@ extends ../layouts/global
 
 block head
   script(type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js')
-  script(type='text/javascript').
-    <!--
-    var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-    if (document.location.protocol == 'https:')
-    	unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-    document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-    -->
+  script(type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js')
   script(type='text/javascript').
     <!--
     var config = {
@@ -51,7 +45,7 @@ block head
           break;
         }
       });
-      u.initPlugin(jQuery("#unityPlayer")[0], "http://cdn.smullindesign.com/market/market.unity3d");
+      u.initPlugin(jQuery("#unityPlayer")[0], "https://cdn.smullindesign.com/market/market.unity3d");
     });
     -->
   style(type="text/css").
@@ -93,5 +87,5 @@ block content
       | One day I'll rebuild for the HTML5 target, which is the current hotness.
     #unityPlayer
       .missing
-        a(href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!")
-          img(alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63")/
+        a(href="https://unity3d.com/webplayer/" title="Unity Web Player. Install now!")
+          img(alt="Unity Web Player. Install now!" src="https://webplayer.unity3d.com/installation/getunity.png" width="193" height="63")/
