@@ -1,92 +1,10 @@
 extends ../layouts/global
 
-block head
-  script(type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js')
-  script(type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js')
-  script(type='text/javascript').
-    <!--
-    var config = {
-      width: 960, 
-      height: 600,
-      params: { enableDebugging: "0" }
-    };
-    var u = new UnityObject2(config);
-
-    jQuery(function() {
-      var $missingScreen = jQuery("#unityPlayer").find(".missing");
-      var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-      $missingScreen.hide();
-      $brokenScreen.hide();
-
-      u.observeProgress(function (progress) {
-        switch(progress.pluginStatus) {
-          case "broken":
-            $brokenScreen.find("a").click(function (e) {
-              e.stopPropagation();
-              e.preventDefault();
-              u.installPlugin();
-              return false;
-            });
-            $brokenScreen.show();
-          break;
-          case "missing":
-            $missingScreen.find("a").click(function (e) {
-              e.stopPropagation();
-              e.preventDefault();
-              u.installPlugin();
-              return false;
-            });
-            $missingScreen.show();
-          break;
-          case "installed":
-            $missingScreen.remove();
-          break;
-          case "first":
-          break;
-        }
-      });
-      u.initPlugin(jQuery("#unityPlayer")[0], "https://cdn.smullindesign.com/HideNSeek/HideNSeek.unity3d");
-    });
-    -->
-  style(type="text/css").
-    <!--
-    div.broken,
-    div.missing {
-    	margin: auto;
-    	position: relative;
-    	top: 50%;
-    	width: 193px;
-    }
-    div.broken a,
-    div.missing a {
-    	height: 63px;
-    	position: relative;
-    	top: -31px;
-    }
-    div.broken img,
-    div.missing img {
-    	border-width: 0px;
-    }
-    div.broken {
-    	display: none;
-    }
-    div#unityPlayer {
-    	cursor: default;
-    	height: 600px;
-    	width: 960px;
-    }
-    -->
-
 block content
   article.game
-    p
-      | This game uses Unity Web Player which was cool in 2015 but now days is blocked by every major browser.
-      br
-      | It will NOT work in Chrome, Firefox, or Opera. It only works in Internet Explorer.
-      br
-      | One day I'll rebuild for the HTML5 target, which is the current hotness.
-    p This game is real-time multiplayer.
-    #unityPlayer
-      .missing
-        a(href="https://unity3d.com/webplayer/" title="Unity Web Player. Install now!")
-          img(alt="Unity Web Player. Install now!" src="https://webplayer.unity3d.com/installation/getunity.png" width="193" height="63")/
+    p 
+		  strong WARNING: 
+		  | This game is real-time multiplayer.
+			| Unfortunately the network is down until I port it from tcp to Websockets.
+			| So you can only see the intro and main menu for now.
+		iframe(src="https://cdn.smullindesign.com/HideNSeek/" width="1000" height="700")
