@@ -3,12 +3,6 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Mike's Game Portal</title>
-    <script>
-      // use https only
-      if (window.location.protocol === 'http:') {
-        window.location = 'https:'+ window.location.href.substr(5);
-      }
-    </script>
     <link rel="stylesheet" href="/stylesheets/global.css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -34,6 +28,6 @@
       <p>This game is real-time multiplayer. Open this page in two browser tabs; one for each player.<br>The matchmaker pairs the next two players, so if you both get the same player or no one else is there, just refresh again.<br>If you control who loads first you can pick your character.</p>
       <iframe src="https://mazehunt.smullindesign.com/" width="960" height="600"></iframe>
     </article>
-    <script src="/behaviors/global.js"></script>
+    <div id="script" src="/behaviors/global.js"></div>
   </body>
 </html>
