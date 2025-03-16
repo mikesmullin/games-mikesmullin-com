@@ -64,6 +64,9 @@ app.get '/mazehunt.html', (req, res) ->
   
 app.get '/pupu-panic.html', (req, res) ->
   res.render 'games/pupu-panic'
+  
+app.get '/meow.html', (req, res) ->
+  res.render 'games/meow'
       
 # Server
 http = app.listen app.PORT, '0.0.0.0', ->
