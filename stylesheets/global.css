@@ -181,3 +181,13 @@ article.game p {
 article.game a {
   color: #add8e6;
 }
+body.wide iframe {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
