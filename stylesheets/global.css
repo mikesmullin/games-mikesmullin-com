@@ -191,3 +191,12 @@ body.wide iframe {
   z-index: 1000;
   overflow: hidden;
 }
+.new {
+  display: inline;
+  background: #005916;
+  color: #9bff93;
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+  margin: 0 0.5em;
+  font-size: 75%;
+}
